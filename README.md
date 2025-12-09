@@ -17,6 +17,16 @@ brew tap m44rten1/sprout
 brew install sprout
 ```
 
+## 🔄 Updating
+
+```bash
+brew update
+brew upgrade m44rten1/sprout/sprout  # or: brew upgrade sprout
+```
+
+If Homebrew cannot find the formula, tap first: `brew tap m44rten1/sprout`.
+If the formula was pinned, run `brew unpin sprout` before upgrading.
+
 ## 🤝 Contributing
 
 This repository only hosts the Homebrew formulae.
