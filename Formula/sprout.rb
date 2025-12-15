@@ -5,24 +5,26 @@
 class Sprout < Formula
   desc "A Git worktree helper CLI tool"
   homepage "https://github.com/m44rten1/sprout"
-  version "2.0.0"
+  version "2.1.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/m44rten1/sprout/releases/download/v2.0.0/sprout_Darwin_x86_64.tar.gz"
-    sha256 "5f451012e0297e0a3cdb12c18500a38a434f2d6ede79c9d768c41929778a8ad9"
+    url "https://github.com/m44rten1/sprout/releases/download/v2.1.0/sprout_Darwin_x86_64.tar.gz"
+    sha256 "f69d54d978efc802e8920eaa9169d60b5ac1b5227d23e8a4f51d82c975a28c0c"
 
     def install
       bin.install "sprout"
+      generate_completions_from_executable(bin/"sprout", "completion")
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/m44rten1/sprout/releases/download/v2.0.0/sprout_Darwin_arm64.tar.gz"
-    sha256 "9ec77f07e9a9ed60735c1dc6da51d9b5bd34e2e074a21aa9c8b75d4353ef2894"
+    url "https://github.com/m44rten1/sprout/releases/download/v2.1.0/sprout_Darwin_arm64.tar.gz"
+    sha256 "bce30a9cbdfea121cef826419aa3d1f57d60e5f2e420d34a08f61ea374fde364"
 
     def install
       bin.install "sprout"
+      generate_completions_from_executable(bin/"sprout", "completion")
     end
   end
 end
