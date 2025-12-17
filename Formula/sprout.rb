@@ -5,13 +5,13 @@
 class Sprout < Formula
   desc "A Git worktree helper CLI tool"
   homepage "https://github.com/m44rten1/sprout"
-  version "3.5.0"
+  version "4.0.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/m44rten1/sprout/releases/download/v3.5.0/sprout_Darwin_x86_64.tar.gz"
-    sha256 "2be8d5235c632edfb7951e37da09f93e124560e06b2be7fba7da22028e782914"
+    url "https://github.com/m44rten1/sprout/releases/download/v4.0.0/sprout_Darwin_x86_64.tar.gz"
+    sha256 "d07ab05076a4c181171ef5e675b0fac9516c5b42838ce83db272a6e7a4fe1c7b"
 
     def install
       bin.install "sprout"
@@ -19,8 +19,8 @@ class Sprout < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/m44rten1/sprout/releases/download/v3.5.0/sprout_Darwin_arm64.tar.gz"
-    sha256 "cfced4bdcdef37ab45e27fce95ca5796330f4ca04f0189a02bf527eeae1b3701"
+    url "https://github.com/m44rten1/sprout/releases/download/v4.0.0/sprout_Darwin_arm64.tar.gz"
+    sha256 "971d683635d9bc28ac3505af32c1e0ce5d2fb880747ab063a6de79400b535523"
 
     def install
       bin.install "sprout"
