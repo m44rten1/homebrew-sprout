@@ -5,13 +5,13 @@
 class Sprout < Formula
   desc "A Git worktree helper CLI tool"
   homepage "https://github.com/m44rten1/sprout"
-  version "4.5.2"
+  version "4.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/m44rten1/sprout/releases/download/v4.5.2/sprout_Darwin_x86_64.tar.gz"
-      sha256 "aa8bef88527e6f27516aa2f936fb93514245e85e63ec2b37c8bd24d2231cb8da"
+      url "https://github.com/m44rten1/sprout/releases/download/v4.6.0/sprout_Darwin_x86_64.tar.gz"
+      sha256 "2b78a0cab861bd90f5261a29502ca17e0d2278f8b818b7b16f3ede5a1d039c7d"
 
       define_method(:install) do
         bin.install "sprout"
@@ -19,8 +19,8 @@ class Sprout < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/m44rten1/sprout/releases/download/v4.5.2/sprout_Darwin_arm64.tar.gz"
-      sha256 "5872b8a4a2032679958a9513f6b4d229ba284b176ed8d7ba8a863325da737664"
+      url "https://github.com/m44rten1/sprout/releases/download/v4.6.0/sprout_Darwin_arm64.tar.gz"
+      sha256 "bd235f3600d4540b0e48d865bf1fa322996bdd29222bc88a8d6dccec89a628e0"
 
       define_method(:install) do
         bin.install "sprout"
@@ -31,16 +31,16 @@ class Sprout < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/m44rten1/sprout/releases/download/v4.5.2/sprout_Linux_x86_64.tar.gz"
-      sha256 "9a8ab32bc5a604a6333552a4d7f66f3fb26cddbc52243d399ef786e8738b4994"
+      url "https://github.com/m44rten1/sprout/releases/download/v4.6.0/sprout_Linux_x86_64.tar.gz"
+      sha256 "b49ab3899612113e8c92cb335a3f88751f64e6bbe4278729566efd5f63cc5de9"
       define_method(:install) do
         bin.install "sprout"
         generate_completions_from_executable(bin/"sprout", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/m44rten1/sprout/releases/download/v4.5.2/sprout_Linux_arm64.tar.gz"
-      sha256 "3d4bc20eb8f48f5ca99a2664959bc2299579b51d05e1f08056157f16d3b506d6"
+      url "https://github.com/m44rten1/sprout/releases/download/v4.6.0/sprout_Linux_arm64.tar.gz"
+      sha256 "193f3aeac2756cd9bccf94ae4031c33dc4500df8a74e39f0f589349e3d55b303"
       define_method(:install) do
         bin.install "sprout"
         generate_completions_from_executable(bin/"sprout", "completion")
